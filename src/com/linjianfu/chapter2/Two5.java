@@ -1,4 +1,4 @@
-package com.linjianfu;
+package com.linjianfu.chapter2;
 
 public class Two5 {
 

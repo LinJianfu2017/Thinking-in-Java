@@ -1,4 +1,4 @@
-package com.linjianfu;
+package com.linjianfu.chapter2;
 
 public class Two4 {
     public static void main(String args[]) {

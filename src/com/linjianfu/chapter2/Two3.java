@@ -1,4 +1,4 @@
-package com.linjianfu;
+package com.linjianfu.chapter2;
 
 class Two3C{
     Two3C( ){
@@ -8,10 +8,10 @@ class Two3C{
 }
 public class Two3 {
 
-    class A{
-           void jj() {
+     class A{
+           String jj(String s) {
            String cao = "diuleiloumo";
-           System.out.println(cao);
+           return cao;
            }
 
     }
@@ -47,7 +47,9 @@ public class Two3 {
    a.d=2.718;
    a.b=false;
    a.show();
-   Two3 bb=new Two3();
+   Two3 b=new Two3();
+   A cc=b.new A();
+   System.out.println(cc.jj(""));
 //   new A().jj();
 //   Two3.A bc= bb.jj();
 

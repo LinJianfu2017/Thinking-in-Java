@@ -1,4 +1,4 @@
-package com.linjianfu;
+package com.linjianfu.chapter2;
 //auto box test:
 public class Two9 {
     public static void main(String args[]){
