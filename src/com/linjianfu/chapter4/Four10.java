@@ -1,31 +1,31 @@
 package com.linjianfu.chapter4;
 
 public class Four10 {
-    private static void vampireNumbers(int digit) {
-        if ((digit % 2 != 0) || digit < 2) {
-            System.out.println("Input error,it mustn't be Vampire Numbers!");
-            return;
-        }
-        int min = (int) Math.pow(10, digit / 2 - 1), max = (int) Math.pow(10, digit / 2) - 1;
-        int l1 = (int) Math.pow(10, digit), l2 = (int) Math.pow(10, digit - 1), count = 0, ij = 0, product[] = new int[l1];
-        String s[] = new String[l1];
-        for (int i = min; i <= max; i++)                //遍历乘积
-            for (int j = i; j <= max; j++) {
-                ij = i * j;
-                s[ij] = String.valueOf(i) + "*" + String.valueOf(j);
-                product[ij] = ij;
-            }
-        for (int i = 0, a = 0; i < l1; i++) {          //筛选吸血鬼
-            a = product[i] % 100;
-            if ((a != 0) && (product[i] > l2)) {
-//                product[count++] = product[i];
-                count++;
-                System.out.println(product[i] + "=" + s[i]);
-            }
-        }
-//        System.out.println(Arrays.toString(Arrays.copyOfRange(product, 0, count)));  //合影留念
-        System.out.println("total=" + count);                                              //获奖人数
-    }
+//    private static void vampireNumbers(int digit) {
+//        if ((digit % 2 != 0) || digit < 2) {
+//            System.out.println("Input error,it mustn't be Vampire Numbers!");
+//            return;
+//        }
+//        int min = (int) Math.pow(10, digit / 2 - 1), max = (int) Math.pow(10, digit / 2) - 1;
+//        int l1 = (int) Math.pow(10, digit), l2 = (int) Math.pow(10, digit - 1), count = 0, ij = 0, product[] = new int[l1];
+//        String s[] = new String[l1];
+//        for (int i = min; i <= max; i++)                //遍历乘积
+//            for (int j = i; j <= max; j++) {
+//                ij = i * j;
+//                s[ij] = String.valueOf(i) + "*" + String.valueOf(j);
+//                product[ij] = ij;
+//            }
+//        for (int i = 0, a = 0; i < l1; i++) {          //筛选吸血鬼
+//            a = product[i] % 100;
+//            if ((a != 0) && (product[i] > l2)) {
+////                product[count++] = product[i];
+//                count++;
+//                System.out.println(product[i] + "=" + s[i]);
+//            }
+//        }
+////        System.out.println(Arrays.toString(Arrays.copyOfRange(product, 0, count)));  //合影留念
+//        System.out.println("total=" + count);                                              //获奖人数
+//    }
 
     /**
      * 下面为参考答案的方法-->仅限四位吸血鬼
@@ -60,7 +60,7 @@ public class Four10 {
 
 
     public static void main(String[] args) {
-        vampireNumbers(4);
+//        vampireNumbers(4);
 /**
  * 下面为参考答案的main方法部分
  */
