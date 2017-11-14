@@ -1,7 +1,9 @@
 package com.linjianfu.chapter4;
 
 import java.util.Arrays;
-
+/**
+ ************************* 下面f1~f4中，双斜杠注释部分可删除***********
+ */
 public class Four9 {
     /**
      * 版本一：数组元素迭代
@@ -30,11 +32,11 @@ public class Four9 {
      * @return
      */
     static int f1(int n) {
-        if (n <= 0) {
-            throw new IllegalArgumentException("n should be greater than zero");
-        } else if (n <= 2) {
-            return 1;
-        }
+//        if (n <= 0) {
+//            throw new IllegalArgumentException("n should be greater than zero");
+//        } else if (n <= 2) {
+//            return 1;
+//        }
         int a = 1;
         int b = 1;
         while (n-- > 2) {
@@ -53,11 +55,11 @@ public class Four9 {
      * @return
      */
     static int f2(int n) {
-        if (n <= 0) {
-            throw new IllegalArgumentException("n should be greater than zero");
-        } else if (n <= 2) {
-            return 1;
-        }
+//        if (n <= 0) {
+//            throw new IllegalArgumentException("n should be greater than zero");
+//        } else if (n <= 2) {
+//            return 1;
+//        }
         int a = 1;
         int b = 1;
         while (n-- > 2) {
@@ -74,9 +76,10 @@ public class Four9 {
      * @return
      */
     static int f3(int n) {
-        if (n <= 0) {
-            throw new IllegalArgumentException("n should be greater than zero");
-        } else if (n <= 2) {
+//        if (n <= 0) {
+//            throw new IllegalArgumentException("n should be greater than zero");
+//        } else
+            if (n <= 2) {
             return 1;
         }
         return f3(n - 1) + f3(n - 2);
@@ -89,11 +92,11 @@ public class Four9 {
      * @return
      */
     static int f4(int n) {
-        if (n <= 0) {
-            throw new IllegalArgumentException("n should be greater than zero");
-        } else if (n <= 2) {
-            return 1;
-        }
+//        if (n <= 0) {
+//            throw new IllegalArgumentException("n should be greater than zero");
+//        } else if (n <= 2) {
+//            return 1;
+//        }
         int a = 1;
         int b = 1;
         while (n > 2) {

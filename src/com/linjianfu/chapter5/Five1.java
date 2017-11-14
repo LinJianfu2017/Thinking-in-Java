@@ -18,9 +18,9 @@ class Test {
 }
 
 public class Five1 {
-    String s1;
-    String s2 = "This is a string.";
-    static String s3;
+    private String s1;
+    private String s2 = "This is a string.";
+    private static String s3;
 
     Five1() {
         System.out.println("Vampire--------");
