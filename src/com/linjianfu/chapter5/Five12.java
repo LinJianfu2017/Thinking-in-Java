@@ -36,7 +36,7 @@ public class Five12 {
         new Tank(4);
         new Tank(5);
         /**
-         * 经验证得，System.runFinalizersOnExit()收集无名实例的finalize(),
+         * 经调试验证得，System.runFinalizersOnExit()收集无名实例的finalize(),
          * 而System.gc()相应地收集的是有名实例的finalize(),事实如此否？
          */
         System.out.println("check tanks:");
