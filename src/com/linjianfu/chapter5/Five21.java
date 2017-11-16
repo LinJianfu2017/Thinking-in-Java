@@ -18,6 +18,7 @@ public class Five21 {
 
     public static void f() {
         System.out.println("Five21");
+        System.out.printf("a=%c c=%c",1,2);
     }
 }
 
