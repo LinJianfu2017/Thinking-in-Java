@@ -4,7 +4,7 @@ import com.linjianfu.chapter6.Six3.Debug.Debug;
 
 class Six4 extends Debug {
     public static void main(String[] args) {
-
+        new Six4().six4a();
     }
 
     void six4a() {
