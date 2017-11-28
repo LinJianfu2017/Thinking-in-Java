@@ -24,8 +24,8 @@ class ConnectionManager {
     /**"我觉得可以把代码块理解为无返回值,无方法名的一个方法, 并在对象初始化的时候执行代码块--->
      *  同样的也有静态代码块, static{}
      *  也就是说一个类只允许存在成员变量和成员方法, 这里代码块也是属于成员方法, 只是特殊的成员方法."
-     *
-     */ {
+     */
+      {
         for (Connection x : ca)
             x = Connection.makeConnection();
     }
