@@ -4,19 +4,19 @@ class Cleanser {
     private String s = "Cleanser";
 
     public void append(String a) {
-        s += a;
+        s +=   a;
     }
 
     public void dilute() {
-        append("dilute()");
+        append(" dilute()");
     }
 
     public void apply() {
-        append("apply()");
+        append(" apply()");
     }
 
     public void scrub() {
-        append("scrub()");
+        append(" scrub()");
     }
 
     @Override

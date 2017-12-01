@@ -1,9 +1,9 @@
 package com.linjianfu.chapter7;
 
 import static com.linjianfu.chapter7.C.cs;
-import static com.linjianfu.chapter7.Seven3.s;
+import static com.linjianfu.chapter7.Seven3.s;//?????
 
-//Exercise 3,4,5,6.
+//Exercise 3,4,5,6,8.
 class A {
     A() {
         System.out.println("A()" + s);
