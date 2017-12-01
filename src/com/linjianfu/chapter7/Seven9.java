@@ -1,5 +1,5 @@
 package com.linjianfu.chapter7;
-//Exercise 9,10.
+//Exercise 9,10，12.
 class Component1{
     Component1(char c){
         System.out.println("Component1()");
