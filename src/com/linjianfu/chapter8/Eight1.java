@@ -1,5 +1,6 @@
 package com.linjianfu.chapter8;
 
+//Exercise 1,17.
 enum Cycleclass {
     UNICYCLE, BICYCLE, TRICYCLE;
 }
@@ -18,11 +19,19 @@ class Unicycle extends Cycle {
     Unicycle() {
         System.out.println("Unicycle()");
     }
+
+    void balance() {
+        System.out.println("Unicycle is hand to balance.");
+    }
 }
 
 class Bicycle extends Cycle {
     Bicycle() {
         System.out.println("Bicycle()");
+    }
+
+    void balance() {
+        System.out.println("Bicycle is easy to balance.");
     }
 }
 
@@ -33,7 +42,7 @@ class Tricycle extends Cycle {
 }
 
 public class Eight1 {
-     static void ride(Cycle cycle, int i) {
+    static void ride(Cycle cycle, int i) {
         switch (i) {
             case 1:
                 cycle.rev(Cycleclass.UNICYCLE);
@@ -62,6 +71,14 @@ public class Eight1 {
         ride(u, 1);
         ride(b, 2);
         ride(t, 3);
+        Cycle[] c = {u, b, t};
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] == u)
+                ((Unicycle) c[i]).balance();
+            if (c[i] == b)
+                ((Bicycle) c[i]).balance();
+            
+        }
     }
 
 }

@@ -35,10 +35,6 @@ class E9 {
 class Rodent {
     protected String name = " Rodent";
 
-//    Rodent() {
-//        System.out.println("Creating" + this);
-//    }
-
     protected void eat() {
         System.out.println(name + ".eat()");
     }
@@ -58,18 +54,12 @@ class Rodent {
 }
 
 class Mouse extends Rodent {
-//    private E9 e9 = new E9();
-
     {
         super.name = " Mouse";
     }
-
-
 }
 
 class Gerbil extends Rodent {
-//    private E9 e9 = new E9();
-
     {
         super.name = " Gerbil";
     }
@@ -77,7 +67,6 @@ class Gerbil extends Rodent {
 }
 
 class Hamster extends Rodent {
-    //    private E9 e9 = new E9();
     private static long counter = 0;
     private final long id = counter++;
 
