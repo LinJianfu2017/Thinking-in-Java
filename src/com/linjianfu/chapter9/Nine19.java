@@ -2,6 +2,9 @@ package com.linjianfu.chapter9;
 
 import java.util.Random;
 
+/**
+ * 此处为工厂方法设计模式;此外还学了策略设计模式、适配器设计模式。
+ */
 interface Throw {
     void throwWhat();
 }
@@ -14,7 +17,7 @@ class ThrowDice implements Throw {
     private Random rand = new Random(47);
 
     public void throwWhat() {
-        System.out.println("Throw dice: " + (rand.nextInt(6) + 1));
+        System.out.println("Throw dice : " + (rand.nextInt(6) + 1));
     }
 }
 
@@ -28,7 +31,7 @@ class ThrowCoin implements Throw {
     private Random rand = new Random(47);
 
     public void throwWhat() {
-        System.out.print("Throw coin: ");
+        System.out.print("Throw coin : ");
         switch (rand.nextInt(2)) {
             default:
                 System.out.println("OnEdge");
