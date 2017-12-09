@@ -9,5 +9,4 @@ public interface Ten6interface {
 
     void face1();
 
-    void face2();
 }
