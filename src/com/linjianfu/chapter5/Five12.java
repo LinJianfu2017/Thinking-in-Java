@@ -49,7 +49,7 @@ public class Five12 {
         System.out.println("first forced gc():");
         System.gc();
         System.out.println("try deprecated runFinalizersOnExit(true):");
-        System.runFinalizersOnExit(true);
+//        System.runFinalizersOnExit(true);
         System.out.println("last forced gc():");
         System.gc();
     }

@@ -46,7 +46,7 @@ public class Five10 {
          * */
         System.gc();
         System.out.println("Try4:");
-        System.runFinalizersOnExit(true);
+//        System.runFinalizersOnExit(true);
 //        System.gc();
 //        lan.finalize();
     }

@@ -12,6 +12,11 @@ class Gerbil {
         gerbilNumber = id++;
     }
 
+    @Override
+    public String toString() {
+        return "Gerbil " + gerbilNumber;
+    }
+
     public void hop() {
         System.out.println("Gerbil " + gerbilNumber + " is hopping.");
     }

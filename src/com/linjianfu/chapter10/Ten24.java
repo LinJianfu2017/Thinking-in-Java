@@ -1,6 +1,8 @@
 package com.linjianfu.chapter10;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Ten24 {
@@ -49,7 +51,26 @@ class Controller {
     }
 }
 
-class GreenhouseControls extends Controller {
+class ControllerEleven13 {
+    private LinkedList<Event> eventLinkedList = new LinkedList<>();
+
+    public void addEvent(Event event) {
+        eventLinkedList.add(event);
+    }
+
+    public void run() {
+        LinkedList<Event> copy = new LinkedList<>(eventLinkedList);
+        Iterator<Event> iterator = copy.iterator();
+        while (iterator.hasNext()) {
+            Event e = iterator.next();
+            System.out.println(e);
+            e.action();
+            iterator.remove();
+        }
+    }
+}
+
+class GreenhouseControls extends ControllerEleven13 {
     private boolean light = false;
 
     public class LightOn extends Event {
