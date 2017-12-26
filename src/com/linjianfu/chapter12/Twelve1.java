@@ -6,12 +6,18 @@ public class Twelve1 {
 //标签，配合break和continue实现Java 类似"goto"功能的跳转操作。
         for (int j = 0; j < 5; j++) {
             inner:
-            for (int i = 3; i < 5; i++) {
+            for (int i = 4; i < 5; i++) {
                 switch (i) {//字符型或者整型。
                     default://可放开头、中间、末尾；当所有case都不符合时，
                         // 默认执行default语句及其后面的case语句直到遇到break或者switch语句结束为止。
                         System.out.println(i);
                     case 0:
+                        System.out.println(i);
+                    case 4:
+                        System.out.println(i);//当有一个case符合条件时，
+                        // 执行跟着该case的语句及后面的其他case语句直到遇到break或switch结束。
+                        //就这一点来说，case与default的作用一致。
+                    case 1:
                         System.out.println(i);
                         break;//结束该次switch判断；这与break在循环嵌套语句中的作用似乎有所不同：
                     // 在那里：break直接结束并跳出当层循环或所指示的标签所包含的循环；
