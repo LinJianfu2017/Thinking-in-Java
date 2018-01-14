@@ -2,11 +2,17 @@ package com.linjianfu.chapter16;
 
 import java.util.Arrays;
 
-class Ex19 {
+//Exercise 19,24.
+class Ex19 implements Comparable<Ex19> {
     int i;
 
     Ex19(int i) {
         this.i = i;
+    }
+
+    @Override
+    public int compareTo(Ex19 o) {
+        return this.i < o.i ? -1 : (this.i == o.i ? 0 : 1);
     }
 
     @Override
@@ -25,5 +31,8 @@ public class Sixteen19 {
         System.out.println(Arrays.toString(b));
         System.out.println(Arrays.equals(a, b));
         System.out.println(a[0].getClass().getSimpleName());
+        int index = Arrays.binarySearch(a, new Ex19(3));
+        System.out.println("index " + index + ", " + a[index]);
     }
+
 }
