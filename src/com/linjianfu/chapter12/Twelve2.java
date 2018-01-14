@@ -8,8 +8,11 @@ package com.linjianfu.chapter12;
  * ***********************************
  * finally块可以看作是try块的subroutine,finally块始终排在try or catch块中的控制转移语句之前得到执行；
  * ***********************************
- * 发现，，不论如何，执行catch块之后，try块剩下的语句都不会被执行，
+ * 发现，，不论如何，抛出异常后，try自动跳转异常捕获并且执行catch之后，try块剩下的语句都不会被执行，
  * 因此catch块必须包含return语句（因返回值void而缺省是默认的情况）。
+ * <p>
+ * <p>
+ * 另外，JVM指令及byte-code文件怎么读，，，
  */
 public class Twelve2 {
     public static void main(String[] args) {
@@ -39,13 +42,13 @@ public class Twelve2 {
             System.out.println("try block,before f(), j=" + j);
             f();
             /**
-             * 可以看出，执行catch之后,try块剩下的部分不会被执行
+             * 可以看出，抛出异常后，try自动跳转异常捕获并且执行catch之后,try块剩下的部分不会被执行
              * */
             System.out.println(test());
             System.out.println("try block,after f(), j=" + j);
             return "try block return statement";
         } catch (MyException e) {
-//           e.printStackTrace();
+//           e.printStackTrace(System.out);
             j = 3.333333f;
             System.out.println("catch block, j=" + j);
             return "catch block return statement BEFORE printStackTrace()";//Error：导致下句成为unreachable statement
