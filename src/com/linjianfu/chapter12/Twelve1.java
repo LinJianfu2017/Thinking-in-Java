@@ -3,7 +3,7 @@ package com.linjianfu.chapter12;
 public class Twelve1 {
     public static void main(String[] args) {
         outer:
-//标签，配合break和continue实现Java 类似"goto"功能的跳转操作。
+//复习：标签，配合break和continue实现Java 类似"goto"功能的跳转操作。
         for (int j = 0; j < 5; j++) {
             inner:
             for (int i = 4; i < 5; i++) {

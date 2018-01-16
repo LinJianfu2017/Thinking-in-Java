@@ -1,4 +1,5 @@
 package com.linjianfu.chapter12;
+//exercise 2,16,17.
 
 /**
  * 关于try、finally以及置于它们之内的return三者之间的联系
@@ -48,7 +49,7 @@ public class Twelve2 {
             System.out.println("try block,after f(), j=" + j);
             return "try block return statement";
         } catch (MyException e) {
-//           e.printStackTrace(System.out);
+            e.printStackTrace(System.out);
             j = 3.333333f;
             System.out.println("catch block, j=" + j);
             return "catch block return statement BEFORE printStackTrace()";//Error：导致下句成为unreachable statement
@@ -57,6 +58,7 @@ public class Twelve2 {
         } finally {
             j++;
             System.out.println("finally block, j=" + j);
+            return "return in finally block";
         }
     }
 
@@ -75,8 +77,15 @@ class MyException extends Exception {
     public MyException() {
     }
 
+    String s;
+
     public MyException(String string) {
-        super(string);
+        s = string;
+    }
+
+    @Override
+    public String toString() {
+        return "Twelve2.java:MyException: " + s;
     }
 }
 /**
