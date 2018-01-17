@@ -41,7 +41,8 @@ public class Thirteen7 {
         String list = readFileLine("./src/com/linjianfu/chapter13/Thirteen7.java");
         Pattern p = Pattern.compile(regex);
         Matcher m;
-        System.out.println(list.toString());
+//        System.out.println(list.toString());
+        System.out.println(list);
 //        for (String s : list) {
         m = p.matcher(list);
         if (m.find()) {
