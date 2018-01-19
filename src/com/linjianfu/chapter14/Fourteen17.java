@@ -22,7 +22,7 @@ public class Fourteen17 {
     float aFloat;
     public String astring;
 
-    //20:
+    //20:看了参考答案，太繁琐，回头有时间再研究那些方法。
     public static void showInfo(String className) {
         int i = 0, j = 0, k = 0;
         try {

@@ -19,6 +19,7 @@ public class Part {
         partFactories.add(new FanBelt.Factory());
         partFactories.add(new PowerSteeringBelt.Factory());
         partFactories.add(new GeneratorBelt.Factory());
+        partFactories.add(new NullPartProxyHandler.NullPart.Factory());
     }
 
     private static Random rand = new Random(47);
