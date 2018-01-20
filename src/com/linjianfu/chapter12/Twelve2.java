@@ -4,7 +4,7 @@ package com.linjianfu.chapter12;
 /**
  * 关于try、finally以及置于它们之内的return三者之间的联系
  * <p>
- * try块、catch块和finally块有各自的操作数栈，用来保存“临时（暂且称为临时）”返回值，
+ * try块、catch块以及finally块有各自的操作数栈，用来保存“临时（暂且称为临时）”返回值，
  * 最终返回给invoker的结果取决于return语句发生的栈；
  * ***********************************
  * finally块可以看作是try块的subroutine,finally块始终排在try or catch块中的控制转移语句之前得到执行；
