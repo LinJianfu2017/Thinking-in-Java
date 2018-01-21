@@ -4,7 +4,7 @@ import net.mindview.util.Generator;
 
 import java.util.*;
 
-public class CollectionGenerator {
+public class Generators {
     public static <T> Collection<T> fill(Collection<T> collection,
                                          Generator<T> generator, int n) {
         while (n-- > 0)
