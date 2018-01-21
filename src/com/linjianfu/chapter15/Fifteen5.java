@@ -1,7 +1,7 @@
 package com.linjianfu.chapter15;
 
 import util.coffee.Coffee;
-import util.coffee.CoffeeGenerator;
+import util.generator.CoffeeGenerator;
 
 public class Fifteen5<T> {
     private class Node {

@@ -1,6 +1,7 @@
-package util.StoryCharacters;
+package util.generator;
 
 import net.mindview.util.Generator;
+import util.StoryCharacters.*;
 
 import java.util.Iterator;
 import java.util.Random;

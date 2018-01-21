@@ -1,6 +1,7 @@
-package util.coffee;
+package util.generator;
 
 import net.mindview.util.Generator;
+import util.coffee.*;
 
 import java.util.Iterator;
 import java.util.Random;

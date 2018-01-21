@@ -1,6 +1,6 @@
 package com.linjianfu.chapter15;
 
-import util.StoryCharacters.CharactersGenerator;
+import util.generator.CharactersGenerator;
 import util.StoryCharacters.StoryCharacter;
 
 public class Fifteen8 {
