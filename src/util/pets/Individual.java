@@ -50,4 +50,8 @@ public class Individual implements Comparable<Individual> {
         }
         return (o.id < id ? -1 : (o.id == id ? 0 : 1));
     }
+
+    public void speak() {
+        System.out.println(getClass().getSimpleName() + ".speak()");
+    }
 }

@@ -10,7 +10,7 @@ public class EgyptianMau extends Cat {
     }
 
     public static class Factory implements
-            util.factory.Factory<EgyptianMau>{
+            util.factory.Factory<EgyptianMau> {
         @Override
         public EgyptianMau create() {
             return new EgyptianMau();

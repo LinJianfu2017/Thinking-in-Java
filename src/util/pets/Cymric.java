@@ -8,8 +8,9 @@ public class Cymric extends Manx {
     public Cymric(String name) {
         super(name);
     }
+
     public static class Factory implements
-            util.factory.Factory<Cymric>{
+            util.factory.Factory<Cymric> {
         @Override
         public Cymric create() {
             return new Cymric();

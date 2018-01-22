@@ -10,7 +10,7 @@ public class Dog extends Pet {
     }
 
     public static class Factory implements
-            util.factory.Factory<Dog>{
+            util.factory.Factory<Dog> {
         @Override
         public Dog create() {
             return new Dog();

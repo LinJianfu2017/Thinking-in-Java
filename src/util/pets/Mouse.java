@@ -10,7 +10,7 @@ public class Mouse extends Rodent {
     }
 
     public static class Factory implements
-            util.factory.Factory<Mouse>{
+            util.factory.Factory<Mouse> {
         @Override
         public Mouse create() {
             return new Mouse();

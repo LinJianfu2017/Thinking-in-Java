@@ -10,7 +10,7 @@ public class Manx extends Cat {
     }
 
     public static class Factory implements
-            util.factory.Factory<Manx>{
+            util.factory.Factory<Manx> {
         @Override
         public Manx create() {
             return new Manx();

@@ -10,7 +10,7 @@ public class Gerbil extends Rodent {
     }
 
     public static class Factory implements
-            util.factory.Factory<Gerbil>{
+            util.factory.Factory<Gerbil> {
         @Override
         public Gerbil create() {
             return new Gerbil();
