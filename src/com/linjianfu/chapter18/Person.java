@@ -48,6 +48,7 @@ public class Person {
         return person;
     }
 
+    //Constructor to restore(recover) a Person from an XML Element.-->People.java uses
     public Person(Element person) {
         first = person.getFirstChildElement("first").getValue();
         last = person.getFirstChildElement("last").getValue();
