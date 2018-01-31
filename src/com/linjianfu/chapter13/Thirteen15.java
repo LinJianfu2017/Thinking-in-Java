@@ -1,5 +1,6 @@
 package com.linjianfu.chapter13;
 
+import com.linjianfu.chapter18.Eighteen26;
 import net.mindview.util.TextFile;
 
 import java.util.regex.Matcher;
@@ -14,7 +15,7 @@ public class Thirteen15 {
 
     public static class JGrep {
         public static void main(String[] args, int flag) throws Exception {
-
+            long start = System.nanoTime();
             if (args.length < 2) {
                 System.out.println("Usage: java JGrep file regex");
                 System.exit(0);
@@ -32,8 +33,12 @@ public class Thirteen15 {
             for (String line : new TextFile(args[0])) {
                 m.reset(line);
                 while (m.find())
-                    System.out.println(index++ + ": " + m.group() + ": " + m.start());
+//                    System.out.println(index++ + ": " + m.group() + ": " + m.start())
+                    ;
             }
+//            System.out.println("---------------------------------------------------");
+            long duration = System.nanoTime() - start;
+            System.out.println("common: " + duration);
         }
     }
 
@@ -44,9 +49,11 @@ public class Thirteen15 {
         for (int flag : flags) {
             try {
                 JGrep.main(s, flag);
+                Eighteen26.JGrep.main(s, flag);
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            System.out.println("\n\n");
         }
 //        System.out.println("^\\.{1}$");
 //        File[] files = new File("./src/com/linjianfu/chapter13").listFiles();
