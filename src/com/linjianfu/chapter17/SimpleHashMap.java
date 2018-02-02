@@ -2,13 +2,44 @@ package com.linjianfu.chapter17;
 
 import java.util.*;
 
+class Prime {
+    public static int firstPrimeAfter(int n) {
+        for (int i = n + 1; i > n; i++) {
+            int factors = 0;
+            for (int j = 1; j < (i + 2) / 2; j++) {
+                if ((i % j) == 0) factors++;
+            }
+            if (factors < 2) return i;
+        }
+        return 0;
+    }
+}
+
 public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
     static final int SIZE = 997;
+    private int capacity = SIZE;
     @SuppressWarnings("unchecked")
     LinkedList<MapEntry<K, V>>[] buckets = new LinkedList[SIZE];
 
+    public int getCapacity() {
+        return capacity;
+    }
+
+    @SuppressWarnings("unchecked")
+    private void rehash() {
+        capacity = Prime.firstPrimeAfter(capacity * 2);
+        LinkedList<MapEntry<K, V>>[] oldBuckets = buckets;
+        buckets = new LinkedList[capacity];
+        for (LinkedList<MapEntry<K, V>> bucket : oldBuckets) {
+            if (bucket == null) continue;
+            for (MapEntry<K, V> mpair : bucket)
+                this.put(mpair.getKey(), mpair.getValue());
+        }
+    }
+
     @Override
     public V put(K key, V value) {
+        if (this.size() > 0.75 * capacity) rehash();
         V oldValue = null;
         int index = Math.abs(key.hashCode()) % SIZE;
         if (buckets[index] == null)
@@ -20,7 +51,7 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
         while (it.hasNext()) {
             MapEntry<K, V> iPair = it.next();
             if (iPair.getKey().equals(key)) {
-                System.out.println("Collision: new" + pair + " for old " + iPair);
+//                System.out.println("Collision: new" + pair + " for old " + iPair);
                 oldValue = iPair.getValue();
                 it.set(pair);
                 found = true;
