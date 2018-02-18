@@ -1,6 +1,10 @@
 package com.linjianfu.chapter21;
 
-public class TwentyTwo {
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+//Ex 2,4
+public class Twenty2 {
     public static class Fibonacci1 implements Runnable {
         private int n;
 
@@ -79,9 +83,18 @@ public class TwentyTwo {
     }
 
     public static void main(String[] args) {
-        new Thread(new Fibonacci1(10)).start();
-        new Thread(new Fibonacci2(10)).start();
-        new Thread(new Fibonacci3(10)).start();
-        new Thread(new Fibonacci4(10)).start();
+//        new Thread(new Fibonacci1(10)).start();
+//        new Thread(new Fibonacci2(10)).start();
+//        new Thread(new Fibonacci3(10)).start();
+//        new Thread(new Fibonacci4(10)).start();
+        ExecutorService exec = Executors.newSingleThreadExecutor(),
+                exec2 = Executors.newCachedThreadPool(),
+                exec3 = Executors.newFixedThreadPool(1);
+        exec2.execute(new Fibonacci2(10));
+        exec3.execute(new Fibonacci3(10));
+        exec.execute(new Fibonacci1(10));
+        exec3.shutdown();
+        exec.shutdown();
+        exec2.shutdown();
     }
 }
