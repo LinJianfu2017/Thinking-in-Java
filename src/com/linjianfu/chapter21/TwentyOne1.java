@@ -3,12 +3,11 @@ package com.linjianfu.chapter21;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-//Ex 1,3
-public class Twenty1 implements Runnable {
+public class TwentyOne1 implements Runnable {
     private static long counter = 0;
     private final long id = counter++;
 
-    private Twenty1() {
+    private TwentyOne1() {
         System.out.println("Starting");
     }
 
@@ -28,9 +27,9 @@ public class Twenty1 implements Runnable {
 
         for (int i = 0; i < 3; i++) {
 //            new Thread(new Twenty1()).start();
-            exec.execute(new Twenty1());
-            exec2.execute(new Twenty1());
-            exec3.execute(new Twenty1());
+            exec.execute(new TwentyOne1());
+            exec2.execute(new TwentyOne1());
+            exec3.execute(new TwentyOne1());
 
         }
         exec.shutdown();
@@ -39,3 +38,4 @@ public class Twenty1 implements Runnable {
     }
 
 }
+

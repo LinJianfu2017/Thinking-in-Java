@@ -110,7 +110,7 @@ public class Four9 {
 
     public static void main(String[] args) {
         for (int i = 1; i < 10; i++) {
-            fibonacci(i);
+//            fibonacci(i);
             System.out.println(f1(i) + "  " + f2(i) + "  " + f3(i) + "  " + f4(i));
         }
     }

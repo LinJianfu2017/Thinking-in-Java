@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 //Ex 2,4
-public class Twenty2 {
+public class TwentyOne2 {
     public static class Fibonacci1 implements Runnable {
         private int n;
 
