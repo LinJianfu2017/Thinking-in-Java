@@ -44,7 +44,7 @@ class Producer implements Runnable {
         while (!Thread.interrupted()) {
             while (count < 100) {
                 synchronized (market.consumer) {
-                    Item item = new Item(++count);
+                        Item item = new Item(++count);
                     if (market.items.offer(item)) {
                         System.out.println("Produced " + item);
                         market.consumer.notify();
